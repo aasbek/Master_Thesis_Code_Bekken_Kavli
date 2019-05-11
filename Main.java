@@ -12,12 +12,8 @@ public class Main {
 		
 		long startTime = System.nanoTime();
 		
-<<<<<<< HEAD
-		String datafile = "51B30R4V_java.txt";
-=======
-		String datafile = "1D10R3V8T20W.txt";
->>>>>>> 1e56177c7ad1fd870ab93df44a0bdf552ab55de0
-		
+		String datafile = "18B15R4V_java.txt";
+
 		// Writing result to files
 		File file = new File ("55P30R4V_java_results.txt");
 		FileWriter resultWriter = new FileWriter("All_Results.txt", true);
