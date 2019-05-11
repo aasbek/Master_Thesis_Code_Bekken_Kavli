@@ -279,7 +279,7 @@ import gurobi.*;
 				model.optimize();
 				long endTimeSolveMaster = System.nanoTime();
 				totalTimeInMaster += (endTimeSolveMaster-startTimeSolveMaster)/1000000;
-				
+			
 				bbNode.setObjectiveValue(model.get(GRB.DoubleAttr.ObjVal));		
 				pw.println(" ");
 				pw.println("Objective value: " + model.get(GRB.DoubleAttr.ObjVal));
@@ -468,16 +468,20 @@ import gurobi.*;
 				for (GRBVar var : lambdaVars[v.number]) {			
 					routeNumber = vehicles.get(v.number).vehicleRoutes.get(number);
 					
-					// If there is a right child (forcing some pickup to 1), the initialization routes (going from depot to depot) must be set to zero 
-					if(bbNode.type.equals("right") && number == 0) {
-						var.set(GRB.DoubleAttr.LB, 0);
-						var.set(GRB.DoubleAttr.UB, 0);
-						model.update();
-					}
-					number ++;
+					
+				
+					
 					
 					// Going through all pickup nodes 
 					for(Node pickupNumber : pickupNodes) {
+						
+						// If there is a right child (forcing some pickup to 1), the initialization route for the vehicle (going from depot to depot) must be set to zero 
+						if(bbNode.type.equals("right") && number == 0 && bbNode.branchingMatrix[v.number][pickupNumber.number/2 - 1] == 1) {
+							var.set(GRB.DoubleAttr.LB, 0);
+							var.set(GRB.DoubleAttr.UB, 0);
+							model.update();
+						}
+						
 						// If the pickup node is contained in the route of a lambda and the branching matrix of the current node says that this pickup node cannot be visited (= -1), force the lambda to zero 
 						if (pathList.get(routeNumber).pickupNodesVisited != null && pathList.get(routeNumber).pickupNodesVisited.contains(pickupNumber.number) && bbNode.branchingMatrix[v.number][pickupNumber.number/2 - 1]  == -1) {
 							var.set(GRB.DoubleAttr.LB, 0);
@@ -487,12 +491,13 @@ import gurobi.*;
 						}
 						// If the pickup node is not contained in the route a lambda and the branching matrix of the current node says that this pickup node cannot be visited (= 1), force the lambda to zero 
 						else if (pathList.get(routeNumber).pickupNodesVisited != null && !pathList.get(routeNumber).pickupNodesVisited.contains(pickupNumber.number) && bbNode.branchingMatrix[v.number][pickupNumber.number/2 - 1] == 1) {
-								var.set(GRB.DoubleAttr.LB, 0);
-								var.set(GRB.DoubleAttr.UB, 0);
-								model.update();
-								break;
+							var.set(GRB.DoubleAttr.LB, 0);
+							var.set(GRB.DoubleAttr.UB, 0);
+							model.update();
+							break;
 						}
-					}	
+					}
+					number ++;
 				}
 			} 
 		}

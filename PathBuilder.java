@@ -2551,7 +2551,7 @@ public class PathBuilder {
 		}
 	
 		// Add the best -number- of labels from the queue to the list of bestlabels that are sent to the master problem 
-		while(bestLabels.size()<Math.min(200, bestLabelQueue.size())) {
+		while(bestLabels.size()<Math.min(50, bestLabelQueue.size())) {
 			Label currentBestLabel = bestLabelQueue.remove();
 			// Add path to the label
 			currentBestLabel.path = new Vector<Node>();

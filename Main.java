@@ -12,7 +12,7 @@ public class Main {
 		
 		long startTime = System.nanoTime();
 		
-		String datafile = "18B15R4V_java.txt";
+		String datafile = "11D16R4V8T20W.txt";
 
 		// Writing result to files
 		File file = new File ("55P30R4V_java_results.txt");
@@ -38,9 +38,11 @@ public class Main {
 		
 		// Writing the name of the current data instance to file
 		fw.print(datafile + ";");
+		fw.print(pickupNodes.size() + ";");
+		fw.print(vehicles.size() + ";");
 		
 		// Reading the input file
-		InputReader.inputReader(datafile, inputdata, pickupNodes, deliveryNodes, startDepots, vehicles);
+		InputReader.inputReader(datafile, inputdata, pickupNodes, deliveryNodes, startDepots, vehicles, fw);
 
 		// Calling the solver 
 		GurobiInterface solver = new GurobiInterface(inputdata, deliveryNodes,  pickupNodes, vehicles, dualVisitedPickupsCon, dualOneVisitCon, pw, fw);

@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 
 public class InstanceData {
+	public int timeWindowSetting;
+	public int weightSetting;
 	public String instanceName;
 	public double fuelPrice;
 	public double fuelConsumptionEmptyTruckPerKm;
@@ -19,6 +21,7 @@ public class InstanceData {
 	public double[][] distances;
 	public int numberOfCities;
 	public int numberOfVehicles; 
+	
 
 	
 	public InstanceData(String datafile) {

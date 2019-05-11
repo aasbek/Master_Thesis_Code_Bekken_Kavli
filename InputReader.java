@@ -1,21 +1,34 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.PrintWriter;
 // import java.util.ArrayList;
 // import java.util.Arrays;
 import java.util.Vector;
 
 
 public class InputReader {
-	public static void inputReader(String datafile, InstanceData inputdata, Vector<Node> pickupNodes, Vector<Node> deliveryNodes, Vector<Node>startDepots, Vector<Vehicle>vehicles) {
+	public static void inputReader(String datafile, InstanceData inputdata, Vector<Node> pickupNodes, Vector<Node> deliveryNodes, Vector<Node>startDepots, Vector<Vehicle>vehicles, PrintWriter fw ) {
 		try {
 			File file = new File(datafile);
 			FileReader reader = new FileReader(file);
 			BufferedReader fr = new BufferedReader(reader);
 			
-			// Reading the number of vehicles in the problem
+			// Reading the time window setting of the problem
 			String line = fr.readLine();
 			String[] list1 = line.split(",");
+			inputdata.timeWindowSetting = Integer.parseInt(list1[1].trim());
+			fw.print(inputdata.timeWindowSetting + ";");
+			
+			// Reading the weight generation setting of the problem
+			line = fr.readLine();
+			list1 = line.split(",");
+			inputdata.weightSetting = Integer.parseInt(list1[1].trim());
+			fw.print(inputdata.weightSetting + ";");
+			
+			// Reading the number of vehicles in the problem
+			line = fr.readLine();
+			list1 = line.split(",");
 			inputdata.numberOfVehicles = Integer.parseInt(list1[1].trim());
 			for (int k = 0; k<inputdata.numberOfVehicles; k++)  {
 				Vehicle v = new Vehicle ();
