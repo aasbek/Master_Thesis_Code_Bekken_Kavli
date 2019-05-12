@@ -7,7 +7,8 @@ import gurobi.*;
 	public class GurobiInterface {
 		
 		// Maximal execution time (3 hours)
-		long maxExecutionTime = 10800000;
+		long maxExecutionTime = 10800;
+		boolean timeLimitReached;
 		
 		private Hashtable<Integer, Label> pathList;
 		double[] dualVisitedPickupsCon;  
@@ -30,6 +31,7 @@ import gurobi.*;
 		// Creating Gurobi environment
 	    GRBEnv    env   = new GRBEnv();
 	    GRBModel  model;
+	    int status;
 	    
 	    // Creating Gurobi variables
 		public ArrayList<GRBVar>[] lambdaVars;
@@ -171,6 +173,7 @@ import gurobi.*;
 		
 		// The main method solving the root node, and if the root node is fractional, calls the branch and bound tree builder
 		public void columnGenerator() throws Exception {
+			timeLimitReached = false;
 			solutionStartTime = System.currentTimeMillis();
 			// Problem is initiated 
 			initiateProblem();
@@ -237,6 +240,7 @@ import gurobi.*;
 				for(int k = 0; k < vehicles.size(); k++) {
 					// Checking if maximal execution time is met
 					if(System.currentTimeMillis() - solutionStartTime > maxExecutionTime) {
+						timeLimitReached = true;
 						pw.println(" ");
 						pw.println("--- Maximal execution time met ----");
 						System.out.println(" ");
@@ -247,7 +251,7 @@ import gurobi.*;
 						fw.println(" ");
 						fw.close();
 						pw.close();
-						System.exit(0);
+						return;
 					}
 					System.out.println("");
 					System.out.println("Solving subproblem for vehicle " + k);
@@ -259,6 +263,7 @@ import gurobi.*;
 					bestLabels = builder.findBestLabel(list, bbNode, pathList, vehicles.get(k));
 					long endTime = System.nanoTime();
 					System.out.println("Subproblem took "+(endTime-startTime)/1000000 + " milli seconds"); 
+					pw.println("Subproblem took "+(endTime-startTime)/1000000 + " milli seconds"); 
 					totalTimeInSub += (endTime-startTime)/1000000;
 					numberOfSubproblemCalls += 1;
 					
@@ -279,7 +284,16 @@ import gurobi.*;
 				model.optimize();
 				long endTimeSolveMaster = System.nanoTime();
 				totalTimeInMaster += (endTimeSolveMaster-startTimeSolveMaster)/1000000;
-			
+				//if(model.feasibility() )
+				status = model.get(GRB.IntAttr.Status);
+				//error = GRBgetintattr (model , GRB_INT_ATTR_STATUS , & optimstatus );
+				if(status == GRB.INFEASIBLE) {
+					// If the model is infeasible for a BBnode, set the objective value to a negative number
+					pw.println("Model not feasible.");
+					bbNode.setObjectiveValue(-10000);
+					return;
+				}
+				
 				bbNode.setObjectiveValue(model.get(GRB.DoubleAttr.ObjVal));		
 				pw.println(" ");
 				pw.println("Objective value: " + model.get(GRB.DoubleAttr.ObjVal));
@@ -297,7 +311,7 @@ import gurobi.*;
 		
 				model.update();
 			}
-		
+			
 			// Adding results from the column generation to the current branch and bound node's list of results and prints results to file
 			for(int k = 0; k < vehicles.size(); k++) {
 				int number = 0;
@@ -318,6 +332,7 @@ import gurobi.*;
 					}	
 				}
 			}
+			
 			// Reset all lambda variables that are set to zero before the next call of this method
 			resetIllegalLambdaVars(this.lambdaVars);
 		}
@@ -476,7 +491,8 @@ import gurobi.*;
 					for(Node pickupNumber : pickupNodes) {
 						
 						// If there is a right child (forcing some pickup to 1), the initialization route for the vehicle (going from depot to depot) must be set to zero 
-						if(bbNode.type.equals("right") && number == 0 && bbNode.branchingMatrix[v.number][pickupNumber.number/2 - 1] == 1) {
+						if(number == 0 && bbNode.branchingMatrix[v.number][pickupNumber.number/2 - 1] == 1) {
+							System.out.println("HER route " + routeNumber);
 							var.set(GRB.DoubleAttr.LB, 0);
 							var.set(GRB.DoubleAttr.UB, 0);
 							model.update();
@@ -484,6 +500,7 @@ import gurobi.*;
 						
 						// If the pickup node is contained in the route of a lambda and the branching matrix of the current node says that this pickup node cannot be visited (= -1), force the lambda to zero 
 						if (pathList.get(routeNumber).pickupNodesVisited != null && pathList.get(routeNumber).pickupNodesVisited.contains(pickupNumber.number) && bbNode.branchingMatrix[v.number][pickupNumber.number/2 - 1]  == -1) {
+						//	System.out.println("HER route " + routeNumber);
 							var.set(GRB.DoubleAttr.LB, 0);
 							var.set(GRB.DoubleAttr.UB, 0);
 							model.update();
@@ -491,6 +508,7 @@ import gurobi.*;
 						}
 						// If the pickup node is not contained in the route a lambda and the branching matrix of the current node says that this pickup node cannot be visited (= 1), force the lambda to zero 
 						else if (pathList.get(routeNumber).pickupNodesVisited != null && !pathList.get(routeNumber).pickupNodesVisited.contains(pickupNumber.number) && bbNode.branchingMatrix[v.number][pickupNumber.number/2 - 1] == 1) {
+						//	System.out.println("HER route " + routeNumber);
 							var.set(GRB.DoubleAttr.LB, 0);
 							var.set(GRB.DoubleAttr.UB, 0);
 							model.update();
@@ -511,7 +529,7 @@ import gurobi.*;
 			BBNode bestBBNode = null;
 			
 			// Stay in the while as long as the bestBBNode (BBnode with best objective value) is fractional 
-			while(fractional) {
+			while(fractional && !timeLimitReached) {
 				double bestProfit = 0;
 				
 				// Go through all leaf nodes and check which has best objective value 

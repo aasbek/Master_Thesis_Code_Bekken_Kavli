@@ -10,7 +10,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		
-		for (int r = 10 ; r < 15 ;  r+= 2) {
+		for (int r = 34 ; r < 40 ;  r+= 2) {
 		
 		long startTime = System.nanoTime();
 		
@@ -18,7 +18,7 @@ public class Main {
 		String datafile = "11D" + r + "R4V8T20W.txt";
 
 		// Writing result to files
-		File file = new File ("11D" + r + "R4V8T20W_results.txt");
+		File file = new File ("11D" + r + "R4V8T20W_results_test.txt");
 		FileWriter resultWriter = new FileWriter("All_Results.txt", true);
 		
 		if (!file.exists()) {
