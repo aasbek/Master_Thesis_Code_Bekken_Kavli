@@ -7,7 +7,7 @@ import gurobi.*;
 	public class GurobiInterface {
 		
 		// Maximal execution time (3 hours)
-		long maxExecutionTime = 10800;
+		long maxExecutionTime = 10800000;
 		boolean timeLimitReached;
 		
 		private Hashtable<Integer, Label> pathList;
