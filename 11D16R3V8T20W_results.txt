@@ -9,7 +9,7 @@ Objective value initial problem: -0.0
 Solving subproblem for vehicle 0
 number of non-dominated paths: 649
 number of dominated labels: 1322
-Subproblem took 13 milli seconds
+Subproblem took 12 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 700
@@ -19,7 +19,7 @@ Subproblem took 14 milli seconds
 Solving subproblem for vehicle 2
 number of non-dominated paths: 546
 number of dominated labels: 3638
-Subproblem took 11 milli seconds
+Subproblem took 9 milli seconds
  
 Objective value: 2354192.5612351997
  
@@ -29,17 +29,17 @@ Objective value: 2354192.5612351997
 Solving subproblem for vehicle 0
 number of non-dominated paths: 611
 number of dominated labels: 4946
-Subproblem took 18 milli seconds
+Subproblem took 14 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 629
 number of dominated labels: 6306
-Subproblem took 16 milli seconds
+Subproblem took 14 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 511
 number of dominated labels: 7210
-Subproblem took 12 milli seconds
+Subproblem took 9 milli seconds
  
 Objective value: 2540347.5509287994
  
@@ -49,7 +49,7 @@ Objective value: 2540347.5509287994
 Solving subproblem for vehicle 0
 number of non-dominated paths: 576
 number of dominated labels: 8355
-Subproblem took 14 milli seconds
+Subproblem took 11 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 600
@@ -59,7 +59,7 @@ Subproblem took 11 milli seconds
 Solving subproblem for vehicle 2
 number of non-dominated paths: 423
 number of dominated labels: 10285
-Subproblem took 7 milli seconds
+Subproblem took 6 milli seconds
  
 Objective value: 3016947.349122499
  
@@ -69,7 +69,7 @@ Objective value: 3016947.349122499
 Solving subproblem for vehicle 0
 number of non-dominated paths: 526
 number of dominated labels: 11337
-Subproblem took 9 milli seconds
+Subproblem took 11 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 550
@@ -79,7 +79,7 @@ Subproblem took 11 milli seconds
 Solving subproblem for vehicle 2
 number of non-dominated paths: 387
 number of dominated labels: 13137
-Subproblem took 5 milli seconds
+Subproblem took 6 milli seconds
  
 Objective value: 3016947.349122499
  
@@ -89,17 +89,17 @@ Objective value: 3016947.349122499
 Solving subproblem for vehicle 0
 number of non-dominated paths: 546
 number of dominated labels: 14183
-Subproblem took 8 milli seconds
+Subproblem took 9 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 588
 number of dominated labels: 15298
-Subproblem took 9 milli seconds
+Subproblem took 11 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 469
 number of dominated labels: 16105
-Subproblem took 6 milli seconds
+Subproblem took 7 milli seconds
  
 Objective value: 3016947.349122499
 
@@ -232,7 +232,7 @@ Node: 29, Location: 3 ,  Steinkjer, Time: 20.35, Profit: 310103.42073480005, Red
 Node: 28, Location: 40 , Brandbu, Time: 11.23, Profit: 322125.24225440004, Reduced cost: 322125.24225440004, unreachablePickupNodes: [28, 6, 18], openNodes: [28], dailyDrivingTime: 0.0, startTimeDailyRest: 0.23000000000000043, numberDailyRests: 2, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 75.092, WeightCapacityUsed: 6.0, VolumeCapacityUsed: 5.0, Predessesor: 0
 Node: 0, Location: 33 ,  Oslo, Time: 0.0, Profit: 0.0, Reduced cost: 0.0, unreachablePickupNodes: [], openNodes: [], dailyDrivingTime: 0.0, startTimeDailyRest: 0.0, numberDailyRests: 1, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 0.0, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0
  
-Total time to solve rootnode: 203
+Total time to solve rootnode: 197
   
 ---- ROOTNODE FINISHED ----
   
@@ -274,7 +274,7 @@ Subproblem took 16 milli seconds
 Solving subproblem for vehicle 2
 number of non-dominated paths: 546
 number of dominated labels: 19681
-Subproblem took 10 milli seconds
+Subproblem took 12 milli seconds
  
 Objective value: 3016923.3209977993
  
@@ -284,7 +284,7 @@ Objective value: 3016923.3209977993
 Solving subproblem for vehicle 0
 number of non-dominated paths: 570
 number of dominated labels: 20705
-Subproblem took 8 milli seconds
+Subproblem took 9 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 597
@@ -294,7 +294,7 @@ Subproblem took 9 milli seconds
 Solving subproblem for vehicle 2
 number of non-dominated paths: 469
 number of dominated labels: 22635
-Subproblem took 6 milli seconds
+Subproblem took 7 milli seconds
  
 Objective value: 3016923.3209977993
 
@@ -425,17 +425,17 @@ Branching matrix right child:
 Solving subproblem for vehicle 0
 number of non-dominated paths: 665
 number of dominated labels: 23952
-Subproblem took 10 milli seconds
+Subproblem took 11 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 688
 number of dominated labels: 25265
-Subproblem took 15 milli seconds
+Subproblem took 16 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 546
 number of dominated labels: 26176
-Subproblem took 14 milli seconds
+Subproblem took 12 milli seconds
  
 Objective value: 2939362.3307043994
  
@@ -445,12 +445,12 @@ Objective value: 2939362.3307043994
 Solving subproblem for vehicle 0
 number of non-dominated paths: 642
 number of dominated labels: 27357
-Subproblem took 8 milli seconds
+Subproblem took 10 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 650
 number of dominated labels: 28553
-Subproblem took 9 milli seconds
+Subproblem took 11 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 454
@@ -525,12 +525,12 @@ Branching matrix left child:
 Solving subproblem for vehicle 0
 number of non-dominated paths: 637
 number of dominated labels: 30577
-Subproblem took 13 milli seconds
+Subproblem took 14 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 688
 number of dominated labels: 31890
-Subproblem took 20 milli seconds
+Subproblem took 18 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 546
@@ -550,12 +550,12 @@ Subproblem took 12 milli seconds
 Solving subproblem for vehicle 1
 number of non-dominated paths: 656
 number of dominated labels: 34868
-Subproblem took 11 milli seconds
+Subproblem took 13 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 474
 number of dominated labels: 35605
-Subproblem took 7 milli seconds
+Subproblem took 8 milli seconds
  
 Objective value: 2553077.9623446
  
@@ -575,7 +575,7 @@ Subproblem took 10 milli seconds
 Solving subproblem for vehicle 2
 number of non-dominated paths: 425
 number of dominated labels: 38300
-Subproblem took 6 milli seconds
+Subproblem took 5 milli seconds
  
 Objective value: 2557530.9264044
  
@@ -595,7 +595,7 @@ Subproblem took 9 milli seconds
 Solving subproblem for vehicle 2
 number of non-dominated paths: 440
 number of dominated labels: 41127
-Subproblem took 7 milli seconds
+Subproblem took 6 milli seconds
  
 Objective value: 2557530.9264044
  
@@ -610,12 +610,12 @@ Subproblem took 9 milli seconds
 Solving subproblem for vehicle 1
 number of non-dominated paths: 586
 number of dominated labels: 43177
-Subproblem took 8 milli seconds
+Subproblem took 9 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 455
 number of dominated labels: 43901
-Subproblem took 7 milli seconds
+Subproblem took 6 milli seconds
  
 Objective value: 2557530.9264044
  
@@ -625,12 +625,12 @@ Objective value: 2557530.9264044
 Solving subproblem for vehicle 0
 number of non-dominated paths: 552
 number of dominated labels: 44858
-Subproblem took 9 milli seconds
+Subproblem took 7 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 570
 number of dominated labels: 45852
-Subproblem took 9 milli seconds
+Subproblem took 8 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 438
@@ -700,17 +700,17 @@ Branching matrix right child:
 Solving subproblem for vehicle 0
 number of non-dominated paths: 637
 number of dominated labels: 47837
-Subproblem took 18 milli seconds
+Subproblem took 17 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 716
 number of dominated labels: 49208
-Subproblem took 12 milli seconds
+Subproblem took 13 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 546
 number of dominated labels: 50119
-Subproblem took 17 milli seconds
+Subproblem took 15 milli seconds
  
 Objective value: 2939330.2932047993
  
@@ -720,17 +720,17 @@ Objective value: 2939330.2932047993
 Solving subproblem for vehicle 0
 number of non-dominated paths: 579
 number of dominated labels: 51182
-Subproblem took 9 milli seconds
+Subproblem took 8 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 668
 number of dominated labels: 52363
-Subproblem took 10 milli seconds
+Subproblem took 11 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 455
 number of dominated labels: 53121
-Subproblem took 5 milli seconds
+Subproblem took 6 milli seconds
  
 Objective value: 2939330.2932047993
 
@@ -826,6 +826,6 @@ Node: 29, Location: 3 ,  Steinkjer, Time: 20.35, Profit: 310103.42073480005, Red
 Node: 28, Location: 40 , Brandbu, Time: 11.23, Profit: 322125.24225440004, Reduced cost: 322125.24225440004, unreachablePickupNodes: [28, 6, 18], openNodes: [28], dailyDrivingTime: 0.0, startTimeDailyRest: 0.23000000000000043, numberDailyRests: 2, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 75.092, WeightCapacityUsed: 6.0, VolumeCapacityUsed: 5.0, Predessesor: 0
 Node: 0, Location: 33 ,  Oslo, Time: 0.0, Profit: 0.0, Reduced cost: 0.0, unreachablePickupNodes: [], openNodes: [], dailyDrivingTime: 0.0, startTimeDailyRest: 0.0, numberDailyRests: 1, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 0.0, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0
  
-Total time in subproblem: 534
+Total time in subproblem: 529
 Total time in master problem 1
-Took 870 milli seconds
+Took 874 milli seconds

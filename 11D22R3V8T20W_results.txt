@@ -9,12 +9,12 @@ Objective value initial problem: -0.0
 Solving subproblem for vehicle 0
 number of non-dominated paths: 1081
 number of dominated labels: 3070
-Subproblem took 37 milli seconds
+Subproblem took 39 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 1180
 number of dominated labels: 6326
-Subproblem took 41 milli seconds
+Subproblem took 42 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 850
@@ -29,17 +29,17 @@ Objective value: 3134954.4007083997
 Solving subproblem for vehicle 0
 number of non-dominated paths: 1002
 number of dominated labels: 11579
-Subproblem took 37 milli seconds
+Subproblem took 36 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 1080
 number of dominated labels: 14759
-Subproblem took 41 milli seconds
+Subproblem took 38 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 793
 number of dominated labels: 17079
-Subproblem took 27 milli seconds
+Subproblem took 31 milli seconds
  
 Objective value: 4463837.479866
  
@@ -49,17 +49,17 @@ Objective value: 4463837.479866
 Solving subproblem for vehicle 0
 number of non-dominated paths: 972
 number of dominated labels: 20081
-Subproblem took 37 milli seconds
+Subproblem took 34 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 1020
 number of dominated labels: 23206
-Subproblem took 42 milli seconds
+Subproblem took 38 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 832
 number of dominated labels: 25337
-Subproblem took 30 milli seconds
+Subproblem took 25 milli seconds
  
 Objective value: 4463837.479866
  
@@ -69,17 +69,17 @@ Objective value: 4463837.479866
 Solving subproblem for vehicle 0
 number of non-dominated paths: 971
 number of dominated labels: 28186
-Subproblem took 36 milli seconds
+Subproblem took 34 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 1061
 number of dominated labels: 31191
-Subproblem took 39 milli seconds
+Subproblem took 38 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 786
 number of dominated labels: 33221
-Subproblem took 22 milli seconds
+Subproblem took 24 milli seconds
  
 Objective value: 4506208.343201999
  
@@ -94,12 +94,12 @@ Subproblem took 39 milli seconds
 Solving subproblem for vehicle 1
 number of non-dominated paths: 1110
 number of dominated labels: 39720
-Subproblem took 42 milli seconds
+Subproblem took 43 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 919
 number of dominated labels: 42053
-Subproblem took 29 milli seconds
+Subproblem took 28 milli seconds
  
 Objective value: 4561822.066574799
  
@@ -109,17 +109,17 @@ Objective value: 4561822.066574799
 Solving subproblem for vehicle 0
 number of non-dominated paths: 921
 number of dominated labels: 44885
-Subproblem took 35 milli seconds
+Subproblem took 33 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 984
 number of dominated labels: 47867
-Subproblem took 37 milli seconds
+Subproblem took 38 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 750
 number of dominated labels: 49870
-Subproblem took 24 milli seconds
+Subproblem took 23 milli seconds
  
 Objective value: 4561822.066574799
  
@@ -129,17 +129,17 @@ Objective value: 4561822.066574799
 Solving subproblem for vehicle 0
 number of non-dominated paths: 1044
 number of dominated labels: 53090
-Subproblem took 38 milli seconds
+Subproblem took 39 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 1113
 number of dominated labels: 56485
-Subproblem took 44 milli seconds
+Subproblem took 41 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 829
 number of dominated labels: 58776
-Subproblem took 26 milli seconds
+Subproblem took 27 milli seconds
  
 Objective value: 4561822.066574799
  
@@ -149,12 +149,12 @@ Objective value: 4561822.066574799
 Solving subproblem for vehicle 0
 number of non-dominated paths: 1083
 number of dominated labels: 62054
-Subproblem took 40 milli seconds
+Subproblem took 38 milli seconds
 
 Solving subproblem for vehicle 1
 number of non-dominated paths: 1149
 number of dominated labels: 65496
-Subproblem took 41 milli seconds
+Subproblem took 42 milli seconds
 
 Solving subproblem for vehicle 2
 number of non-dominated paths: 820
@@ -215,8 +215,8 @@ Node: 29, Location: 3 ,  Steinkjer, Time: 20.35, Profit: 310103.42073480005, Red
 Node: 28, Location: 40 , Brandbu, Time: 11.23, Profit: 322125.24225440004, Reduced cost: 322125.24225440004, unreachablePickupNodes: [28, 6, 18], openNodes: [28], dailyDrivingTime: 0.0, startTimeDailyRest: 0.23000000000000043, numberDailyRests: 2, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 75.092, WeightCapacityUsed: 6.0, VolumeCapacityUsed: 5.0, Predessesor: 0
 Node: 0, Location: 33 ,  Oslo, Time: 0.0, Profit: 0.0, Reduced cost: 0.0, unreachablePickupNodes: [], openNodes: [], dailyDrivingTime: 0.0, startTimeDailyRest: 0.0, numberDailyRests: 1, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 0.0, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0
  
-Total time to solve rootnode: 876
+Total time to solve rootnode: 861
   
 ---- ROOTNODE FINISHED ----
   
-Took 914 milli seconds
+Took 901 milli seconds
