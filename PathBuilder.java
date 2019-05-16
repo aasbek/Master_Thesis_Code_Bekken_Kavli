@@ -2410,18 +2410,18 @@ public class PathBuilder {
 			// The label removed from unprocessed list is added to the processed list
 			processedAtNode.get(label.node.number).add(label); 
 			
-			//if(labelsFoundCounter >= 5) {
-			//	break;
-			//}
+		//	if(labelsFoundCounter >= 5) {
+		//		break;
+		//	}
 		}
 		
 		//	System.out.println("Number of paths:" + processed.size());
-		System.out.println("number of non-dominated paths: "+list.size());
-		pw.println("number of non-dominated paths: "+list.size());
+	//	System.out.println("number of non-dominated paths: "+list.size());
+		pw.append("number of non-dominated paths: "+list.size());
 		numberOfPaths += list.size();
-		System.out.println(numberOfPaths);
-		System.out.println("number of dominated labels: "+numberOfDominatedLabels);
-		pw.println("number of dominated labels: "+numberOfDominatedLabels);
+	//	System.out.println(numberOfPaths);
+	//	System.out.println("number of dominated labels: "+numberOfDominatedLabels);
+		pw.append("number of dominated labels: "+numberOfDominatedLabels);
 		//	System.out.println("The best label is:");
 		//	pw.println ("The best label is: ");
 		//	System.out.println(findBestLabel(list).toString());
@@ -2551,7 +2551,7 @@ public class PathBuilder {
 		}
 	
 		// Add the best -number- of labels from the queue to the list of bestlabels that are sent to the master problem 
-		while(bestLabels.size()<Math.min(50, bestLabelQueue.size())) {
+		while(bestLabels.size()<Math.min(100, bestLabelQueue.size())) {
 			Label currentBestLabel = bestLabelQueue.remove();
 			// Add path to the label
 			currentBestLabel.path = new Vector<Node>();
