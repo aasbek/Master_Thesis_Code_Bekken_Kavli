@@ -14,3 +14,7 @@
 /Main_Basic.class
 /PathBuilder_Heuristic.class
 /GurobiInterface_Heuristic.class
+/WorstLabelComparator.class
+/Main_Heuristic.class
+/PathBuilder_Heuristic2.class
+/PathBuilder_Full_Truckload.class

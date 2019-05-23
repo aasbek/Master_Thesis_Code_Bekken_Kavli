@@ -1,11 +1,11 @@
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.PriorityQueue;
 import java.util.Vector;
-import java.io.PrintWriter;
+
 
 public class PathBuilder_Heuristic {
-
 	public Vector<Node> pickupNodes;
 	public Vector<Node> deliveryNodes;
 	public Vector<Node> nodesWithoutDepot;
@@ -2218,7 +2218,7 @@ public class PathBuilder_Heuristic {
 			for(int i : label.openNodes) { 
 				
 				Node node = L.vehicle.nodes.get(i+1); 
-				
+			
 				double arcDrivingTime = inputdata.getTime(label.node, node);
 				double intermediateBreakTime = 0.75;
 				double maxDrivingTime = 4.5;
@@ -2436,8 +2436,69 @@ public class PathBuilder_Heuristic {
 		return labelsFound;
 	}
 	
+	
+	
+		// DOM6 HEURISTIC DOMINANCE
+		
+		// Checks if L1 dominates L2
+		private boolean dominateLabel(Label L1, Label L2, BBNode bbNode) { 
+			
+			if (L1.node.number != L2.node.number) {
+				return false;
+			}
+			if (L1.reducedCost+zeroTol<L2.reducedCost) {
+				return false;
+			}
+			if (L1.time-zeroTol>L2.time) {
+				return false;
+			}
+			// If L2 contains a mandatory pickup node that L1 does not contain, then L1 does not dominate L2
+			for(int pickup : bbNode.branchingMatrix[L1.vehicle.number]) {
+				int pickupNumber = 2;
+				if(pickup == 1) {
+					if(!L1.pickupNodesVisited.contains(pickupNumber) && L2.pickupNodesVisited.contains(pickupNumber)) {
+						return false;
+					}
+				}
+				pickupNumber += 2;
+			}
+			
+			if( L1.startTimeDailyRest >= L2.startTimeDailyRest) {	
+			
+		
+			//	if ( L1.dailyDrivingTime <= L2.dailyDrivingTime) { //&& L1.numberDailyRests >= L2.numberDailyRests ) {
+				//	return true;
+			//	}
+				//	if ( L1.consecutiveDrivingTime <= L2.consecutiveDrivingTime) {
+				//		return true;
+				//	}
+					//		if (L1.consecutiveWorkingTime <= L2.consecutiveWorkingTime) {
+						//		return true;
+							//	for (int i : L1.openNodes ){
+							//		if (!L2.openNodes.contains(i)){
+							//			return false;
+							//		}
+							//	}
+								for (int i : L1.unreachablePickupNodes ){
+									if (!L2.unreachablePickupNodes.contains(i)){
+										return false;
+									}	
+							//	return true;
+								}
+								return true;	
+						//	}	
+						//else return false; 	
+					//}
+					//else return false; 	
+				
+			}
+				else return false; 	
+			
+		}
+	
+	
 	// Checks if L1 dominates L2
-	private boolean dominateLabel(Label L1, Label L2, BBNode bbNode) { 
+/*	private boolean dominateLabel(Label L1, Label L2, BBNode bbNode) { 
 		
 		if (L1.node.number != L2.node.number) {
 			return false;
@@ -2460,8 +2521,6 @@ public class PathBuilder_Heuristic {
 		}
 		
 		if( L1.startTimeDailyRest >= L2.startTimeDailyRest) {	
-		//	return true;
-		//}
 			if ( L1.dailyDrivingTime <= L2.dailyDrivingTime && L1.numberDailyRests >= L2.numberDailyRests ) {
 				if ( L1.consecutiveDrivingTime <= L2.consecutiveDrivingTime) {
 						if (L1.consecutiveWorkingTime <= L2.consecutiveWorkingTime) {
@@ -2484,7 +2543,7 @@ public class PathBuilder_Heuristic {
 			else return false; 	
 		}
 		else return false; 
-	}
+	}*/
 	
 	
 	
@@ -2595,4 +2654,3 @@ public class PathBuilder_Heuristic {
 	}
 
 }
-

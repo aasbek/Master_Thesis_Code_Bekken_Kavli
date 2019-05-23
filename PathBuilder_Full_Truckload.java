@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Vector;
 
 
-public class PathBuilder {
+public class PathBuilder_Full_Truckload {
 	public Vector<Node> pickupNodes;
 	public Vector<Node> deliveryNodes;
 	public Vector<Node> nodesWithoutDepot;
@@ -20,7 +20,7 @@ public class PathBuilder {
 	int routeNumber = 1;
 
 
-	public PathBuilder(Vector<Node> pickupNodes, Vector<Node> deliveryNodes, InstanceData inputdata, PrintWriter pw, Vector<Vehicle> vehicles) {
+	public PathBuilder_Full_Truckload(Vector<Node> pickupNodes, Vector<Node> deliveryNodes, InstanceData inputdata, PrintWriter pw, Vector<Vehicle> vehicles) {
 		this.pickupNodes = pickupNodes;
 		this.deliveryNodes = deliveryNodes;
 		this.inputdata = inputdata;
@@ -155,6 +155,11 @@ public class PathBuilder {
 		
 	
 		else if(node.type == "PickupNode"){
+			
+			// For full truckload, the list of open nodes must be empty when entering a pickup node
+			if(!L.openNodes.isEmpty()){
+				return null;	
+			}
 			
 			// Returns null if the node is unreachable 
 			if(L.unreachablePickupNodes.contains(node.number)) {
@@ -515,6 +520,12 @@ public class PathBuilder {
 		
 		
 		if(node.type == "PickupNode"){
+			
+			// For full truckload, the list of open nodes must be empty when entering a pickup node
+			if(!L.openNodes.isEmpty()){
+				return null;	
+			}
+			
 			// Returns null if the node is unreachable 
 			if(L.unreachablePickupNodes.contains(node.number)) {
 				return null;
@@ -845,6 +856,12 @@ public class PathBuilder {
 		
  	
 		 if(node.type == "PickupNode"){
+			 
+				
+			// For full truckload, the list of open nodes must be empty when entering a pickup node
+			if(!L.openNodes.isEmpty()){
+				return null;	
+			}
 			 
 			// Returns null if the node is unreachable 
 			if(L.unreachablePickupNodes.contains(node.number)) {
@@ -1187,6 +1204,11 @@ public class PathBuilder {
 		
  	
 		if(node.type == "PickupNode"){
+			
+			// For full truckload, the list of open nodes must be empty when entering a pickup node
+			if(!L.openNodes.isEmpty()){
+				return null;	
+			}
 			
 			// Returns null if the node is unreachable 
 			if(L.unreachablePickupNodes.contains(node.number)) {
@@ -1540,6 +1562,11 @@ public class PathBuilder {
 		
 		
 		 if(node.type == "PickupNode"){
+			 
+			// For full truckload, the list of open nodes must be empty when entering a pickup node
+			if(!L.openNodes.isEmpty()){
+				return null;	
+			}
 			 
 			// Returns null if the node is unreachable 
 			if(L.unreachablePickupNodes.contains(node.number)) {
@@ -1905,6 +1932,11 @@ public class PathBuilder {
 		
 	 	
 		if(node.type == "PickupNode"){
+			
+			// For full truckload, the list of open nodes must be empty when entering a pickup node
+			if(!L.openNodes.isEmpty()){
+				return null;	
+			}
 			
 			// Returns null if the node is unreachable 
 			if(L.unreachablePickupNodes.contains(node.number)) {

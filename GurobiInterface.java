@@ -49,7 +49,7 @@ import gurobi.*;
 		public Vector<Node> pickupNodes;
 		public Vector<Node> deliveryNodes;
 		public Vector<Vehicle> vehicles;
-		public PathBuilder builder;
+		public PathBuilder_Full_Truckload builder;
 		public PrintWriter pw;
 		public PrintWriter fw;
 
@@ -125,7 +125,7 @@ import gurobi.*;
 			buildProblem();
 			model.optimize();
 			
-			builder = new PathBuilder(pickupNodes, deliveryNodes, inputdata, pw, vehicles);
+			builder = new PathBuilder_Full_Truckload(pickupNodes, deliveryNodes, inputdata, pw, vehicles);
 			
 			// Print initial solution
 			for(int k = 0; k < vehicles.size(); k++) {

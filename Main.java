@@ -14,7 +14,9 @@ public class Main {
 		
 		int fileNumber = 3;
 		int numVehicles = 5;
+		String type = "full_truckload";
 		int[] RequestDataSetNumbers = {10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 46, 49};
+	
 	
 		for (int r : RequestDataSetNumbers) {
 			int t = 12;
@@ -28,8 +30,8 @@ public class Main {
 							String datafile = fileNumber + "D" + r + "R" + numVehicles + "V" + t + "T" + w + "W.txt";
 
 							// Writing result to files
-							File file = new File (fileNumber + "D" + r + "R" + numVehicles + "V" +t+ "T" + w+ "W_results.txt");
-							FileWriter resultWriter = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results.txt", true);
+							File file = new File (fileNumber + "D" + r + "R" + numVehicles + "V" +t+ "T" + w+ "W_results_"+type+".txt");
+							FileWriter resultWriter = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results_"+type+".txt", true);
 							
 							if (!file.exists()) {
 								try { file.createNewFile(); 
@@ -85,8 +87,8 @@ public class Main {
 				String datafile = fileNumber +"D" + r + "R" + numVehicles +"V12T15W.txt";
 
 				// Writing result to files
-				File file = new File (fileNumber + "D" + r + "R" + numVehicles +"V12T15W_results.txt");
-				FileWriter resultWriter = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results.txt", true);
+				File file = new File (fileNumber + "D" + r + "R" + numVehicles +"V12T15W_results_"+type+".txt");
+				FileWriter resultWriter = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results_"+type+".txt", true);
 			
 				if (!file.exists()) {
 					try { file.createNewFile(); 
@@ -138,8 +140,8 @@ public class Main {
 				String datafile = fileNumber +"D" + r + "R" + numVehicles +"V12T15W.txt";
 
 				// Writing result to files
-				File file = new File (fileNumber + "D" + r + "R" + numVehicles +"V12T15W_results.txt");
-				FileWriter resultWriter = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results.txt", true);
+				File file = new File (fileNumber + "D" + r + "R" + numVehicles +"V12T15W_results_"+type+".txt");
+				FileWriter resultWriter = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results_"+type+".txt", true);
 			
 				if (!file.exists()) {
 					try { file.createNewFile(); 
