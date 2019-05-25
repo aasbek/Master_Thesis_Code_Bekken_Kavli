@@ -1,0 +1,93 @@
+lambda_0_0 1.0
+lambda_1_1 1.0
+lambda_2_2 1.0
+Objective value initial problem: -0.0
+----- New master problem ---- 
+
+ Solving subproblem for vehicle 0
+number of non-dominated paths: 81number of dominated labels: 33
+ Subproblem took 1 milli seconds 
+
+ Solving subproblem for vehicle 1
+number of non-dominated paths: 81number of dominated labels: 66
+ Subproblem took 1 milli seconds 
+
+ Solving subproblem for vehicle 2
+number of non-dominated paths: 60number of dominated labels: 111
+ Subproblem took 1 milli seconds 
+
+ Objective value: 1503389.1737751998
+
+----- New master problem ---- 
+
+ Solving subproblem for vehicle 0
+number of non-dominated paths: 60number of dominated labels: 145
+ Subproblem took 1 milli seconds 
+
+ Solving subproblem for vehicle 1
+number of non-dominated paths: 60number of dominated labels: 179
+ Subproblem took 2 milli seconds 
+
+ Solving subproblem for vehicle 2
+number of non-dominated paths: 60number of dominated labels: 222
+ Subproblem took 1 milli seconds 
+
+ Objective value: 1646125.4462155998
+
+----- New master problem ---- 
+
+ Solving subproblem for vehicle 0
+number of non-dominated paths: 60number of dominated labels: 256
+ Subproblem took 1 milli seconds 
+
+ Solving subproblem for vehicle 1
+number of non-dominated paths: 60number of dominated labels: 290
+ Subproblem took 0 milli seconds 
+
+ Solving subproblem for vehicle 2
+number of non-dominated paths: 60number of dominated labels: 333
+ Subproblem took 0 milli seconds 
+
+ Objective value: 1646125.4462155998
+
+
+lambda_0_21 1.0
+
+ Vehicle 0 drives route 21
+ Profit: 852251.8112663999
+Node: 1, Location: 51 , EndDepot, Time: 48.93, Profit: 852251.8112663999, Reduced cost: 852251.8112663999, unreachablePickupNodes: [12, 8, 4, 10], openNodes: [], dailyDrivingTime: 8.23, startTimeDailyRest: 26.75, numberDailyRests: 3, StartTimeIntermediateBreak: 43.349999999999994, consecutiveDrivingTime: 3.73, workingTime: 4.83, totalDistance: 1239.174, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0, Predessesor: 9, Predessesor: 8, Predessesor: 13, Predessesor: 12, Predessesor: 0
+Node: 9, Location: 38 , Grimsbu, Time: 47.83, Profit: 852986.6112664, Reduced cost: 852986.6112664, unreachablePickupNodes: [12, 8, 4, 10], openNodes: [], dailyDrivingTime: 8.23, startTimeDailyRest: 26.75, numberDailyRests: 3, StartTimeIntermediateBreak: 43.349999999999994, consecutiveDrivingTime: 3.73, workingTime: 3.73, totalDistance: 1239.174, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0, Predessesor: 8, Predessesor: 13, Predessesor: 12, Predessesor: 0
+Node: 8, Location: 47 ,  Kristiansund, Time: 42.129999999999995, Profit: 859787.8913956, Reduced cost: 859787.8913956, unreachablePickupNodes: [12, 8, 4, 10], openNodes: [8], dailyDrivingTime: 4.38, startTimeDailyRest: 26.75, numberDailyRests: 3, StartTimeIntermediateBreak: 20.0, consecutiveDrivingTime: 4.38, workingTime: 4.38, totalDistance: 979.3330000000001, WeightCapacityUsed: 11.0, VolumeCapacityUsed: 28.0, Predessesor: 13, Predessesor: 12, Predessesor: 0
+Node: 13, Location: 35 ,  Lillestr�m, Time: 21.75, Profit: 593209.321112, Reduced cost: 593209.321112, unreachablePickupNodes: [12], openNodes: [], dailyDrivingTime: 5.5, startTimeDailyRest: 3.0, numberDailyRests: 2, StartTimeIntermediateBreak: 20.0, consecutiveDrivingTime: 1.0, workingTime: 1.0, totalDistance: 408.46, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0, Predessesor: 12, Predessesor: 0
+Node: 12, Location: 13 ,  Hassdalen, Time: 14.0, Profit: 603338.0, Reduced cost: 603338.0, unreachablePickupNodes: [12], openNodes: [12], dailyDrivingTime: 0.0, startTimeDailyRest: 3.0, numberDailyRests: 2, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 0.0, WeightCapacityUsed: 15.0, VolumeCapacityUsed: 22.0, Predessesor: 0
+Node: 0, Location: 13 ,  Hassdalen, Time: 0.0, Profit: 0.0, Reduced cost: 0.0, unreachablePickupNodes: [], openNodes: [], dailyDrivingTime: 0.0, startTimeDailyRest: 0.0, numberDailyRests: 1, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 0.0, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0
+
+
+
+lambda_1_65 1.0
+
+ Vehicle 1 drives route 65
+ Profit: 651137.3625088
+Node: 1, Location: 51 , EndDepot, Time: 56.18999999999998, Profit: 651137.3625088, Reduced cost: 651137.3625088, unreachablePickupNodes: [4, 12, 6, 2, 8, 10], openNodes: [], dailyDrivingTime: 5.839999999999998, startTimeDailyRest: 37.0, numberDailyRests: 3, StartTimeIntermediateBreak: 53.29999999999999, consecutiveDrivingTime: 1.339999999999998, workingTime: 2.139999999999998, totalDistance: 1301.7440000000001, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0, Predessesor: 7, Predessesor: 6, Predessesor: 5, Predessesor: 4, Predessesor: 0
+Node: 7, Location: 38 , Grimsbu, Time: 55.389999999999986, Profit: 651671.7625088, Reduced cost: 651671.7625088, unreachablePickupNodes: [4, 12, 6, 2, 8, 10], openNodes: [], dailyDrivingTime: 5.839999999999998, startTimeDailyRest: 37.0, numberDailyRests: 3, StartTimeIntermediateBreak: 53.29999999999999, consecutiveDrivingTime: 1.339999999999998, workingTime: 1.339999999999998, totalDistance: 1301.7440000000001, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0, Predessesor: 6, Predessesor: 5, Predessesor: 4, Predessesor: 0
+Node: 6, Location: 48 , Hammarvika, Time: 49.35999999999999, Profit: 658938.6298988, Reduced cost: 658938.6298988, unreachablePickupNodes: [4, 12, 6, 2, 8, 10], openNodes: [6], dailyDrivingTime: 1.3599999999999977, startTimeDailyRest: 37.0, numberDailyRests: 3, StartTimeIntermediateBreak: 31.729999999999997, consecutiveDrivingTime: 1.3599999999999977, workingTime: 1.3599999999999977, totalDistance: 1009.167, WeightCapacityUsed: 8.0, VolumeCapacityUsed: 6.0, Predessesor: 5, Predessesor: 4, Predessesor: 0
+Node: 5, Location: 38 , Grimsbu, Time: 32.48, Profit: 439039.6686424, Reduced cost: 439039.6686424, unreachablePickupNodes: [4, 12], openNodes: [], dailyDrivingTime: 4.83, startTimeDailyRest: 4.5, numberDailyRests: 2, StartTimeIntermediateBreak: 31.729999999999997, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 716.59, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0, Predessesor: 4, Predessesor: 0
+Node: 4, Location: 33 ,  Oslo, Time: 26.0, Profit: 447374.8842748, Reduced cost: 447374.8842748, unreachablePickupNodes: [4, 12], openNodes: [4], dailyDrivingTime: 0.5, startTimeDailyRest: 4.5, numberDailyRests: 2, StartTimeIntermediateBreak: 16.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 381.939, WeightCapacityUsed: 14.0, VolumeCapacityUsed: 32.0, Predessesor: 0
+Node: 0, Location: 2 , R�ros, Time: 0.0, Profit: 0.0, Reduced cost: 0.0, unreachablePickupNodes: [], openNodes: [], dailyDrivingTime: 0.0, startTimeDailyRest: 0.0, numberDailyRests: 1, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 0.0, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0
+
+
+
+lambda_2_101 1.0
+
+ Vehicle 2 drives route 101
+ Profit: 142736.27244039997
+Node: 1, Location: 51 , EndDepot, Time: 52.699999999999996, Profit: 142736.27244039997, Reduced cost: 142736.27244039997, unreachablePickupNodes: [10, 4, 12, 2, 6, 8], openNodes: [], dailyDrivingTime: 4.3999999999999995, startTimeDailyRest: 37.0, numberDailyRests: 3, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 4.3999999999999995, workingTime: 4.699999999999999, totalDistance: 722.905, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0, Predessesor: 11, Predessesor: 10, Predessesor: 0
+Node: 11, Location: 6 , T�nsberg, Time: 52.4, Profit: 142936.67244039997, Reduced cost: 142936.67244039997, unreachablePickupNodes: [10, 4, 12, 2, 6, 8], openNodes: [], dailyDrivingTime: 4.3999999999999995, startTimeDailyRest: 37.0, numberDailyRests: 3, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 4.3999999999999995, workingTime: 4.3999999999999995, totalDistance: 722.905, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0, Predessesor: 10, Predessesor: 0
+Node: 10, Location: 23 ,  Vinje�ra, Time: 33.0, Profit: 162270.72492439998, Reduced cost: 162270.72492439998, unreachablePickupNodes: [10, 4, 12], openNodes: [10], dailyDrivingTime: 0.0, startTimeDailyRest: 22.0, numberDailyRests: 2, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 105.067, WeightCapacityUsed: 3.0, VolumeCapacityUsed: 11.0, Predessesor: 0
+Node: 0, Location: 47 ,  Kristiansund, Time: 0.0, Profit: 0.0, Reduced cost: 0.0, unreachablePickupNodes: [], openNodes: [], dailyDrivingTime: 0.0, startTimeDailyRest: 0.0, numberDailyRests: 1, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 0.0, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0
+
+Total time to solve rootnode: 17
+
+---- ROOTNODE FINISHED ----
+ 
+ Took 1041 milli seconds

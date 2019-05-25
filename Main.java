@@ -15,7 +15,8 @@ public class Main {
 		int fileNumber = 3;
 		int numVehicles = 5;
 		String type = "full_truckload";
-		int[] RequestDataSetNumbers = {10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 46, 49};
+	//	int[] RequestDataSetNumbers = {10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 46, 49};
+		int[] RequestDataSetNumbers = {40, 43, 46, 49};
 	
 	
 		for (int r : RequestDataSetNumbers) {

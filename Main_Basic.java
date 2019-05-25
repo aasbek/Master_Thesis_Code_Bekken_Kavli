@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Vector;
 
-public class Main_Heuristic {
+public class Main_Basic {
 
 
 	public static void main(String[] args) throws Exception {
@@ -18,12 +18,12 @@ public class Main_Heuristic {
 			
 		for (int r : MoselTestDataSetNumbers) {
 			//String datafile =  "1D" + r + "R3V12T15W.txt";
-			String datafile =  r+"_TEST_Java.txt";
+			String datafile = r+"_TEST_Java.txt";
 	
 			// Writing result to files
 			//File file = new File ( "1D"+r+"R3V12T15W_results.txt");
 			//FileWriter resultWriter = new FileWriter("1D3V_all_results_heuristic_DOM8.txt", true);
-			File file = new File ( r+"_TEST_Java_results.txt");
+			File file = new File (r+"_TEST_Java_results.txt");
 			FileWriter resultWriter = new FileWriter("TEST_Java_All_Results.txt", true);
 			
 			if (!file.exists()) {

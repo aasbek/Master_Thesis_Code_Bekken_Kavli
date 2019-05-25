@@ -14,8 +14,9 @@ public class Main2 {
 		int fileNumber = 3;
 		String type = "full_truckload";
 		int[] RequestDataSetNumbers = {10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 46, 49};
+//		int[] RequestDataSetNumbers = {22, 25, 28, 31, 34, 37, 40, 43, 46, 49};
 		
-		for(int numVehicles = 6; numVehicles < 11; numVehicles ++) {
+		for(int numVehicles = 9; numVehicles < 11; numVehicles ++) {
 			for (int r : RequestDataSetNumbers) {
 				int t = 12;
 				int w = 15;

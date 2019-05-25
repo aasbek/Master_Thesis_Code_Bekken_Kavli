@@ -634,7 +634,7 @@ import gurobi.*;
 		// Method checking whether a one or more of the lambda variables of a branch and bound node is fractional
 		public boolean checkLambdaFractionality (BBNode bbNode) {
 			for (double lambda : bbNode.lambdaValues) {
-				if (lambda != 0 && lambda != 1) {
+				if (lambda > 0 + zeroTol && lambda < 1 - zeroTol) {
 					return true;
 				}	
 			}
