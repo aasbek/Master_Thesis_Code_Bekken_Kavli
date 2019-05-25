@@ -10,7 +10,7 @@ number of non-dominated paths: 30number of dominated labels: 33
 
  Solving subproblem for vehicle 1
 number of non-dominated paths: 36number of dominated labels: 65
- Subproblem took 1 milli seconds 
+ Subproblem took 0 milli seconds 
 
  Solving subproblem for vehicle 2
 number of non-dominated paths: 33number of dominated labels: 93
@@ -22,7 +22,7 @@ number of non-dominated paths: 33number of dominated labels: 93
 
  Solving subproblem for vehicle 0
 number of non-dominated paths: 30number of dominated labels: 120
- Subproblem took 1 milli seconds 
+ Subproblem took 0 milli seconds 
 
  Solving subproblem for vehicle 1
 number of non-dominated paths: 36number of dominated labels: 152
@@ -30,7 +30,7 @@ number of non-dominated paths: 36number of dominated labels: 152
 
  Solving subproblem for vehicle 2
 number of non-dominated paths: 33number of dominated labels: 180
- Subproblem took 1 milli seconds 
+ Subproblem took 0 milli seconds 
 
  Objective value: 852172.8824444
 
@@ -38,15 +38,15 @@ number of non-dominated paths: 33number of dominated labels: 180
 
  Solving subproblem for vehicle 0
 number of non-dominated paths: 30number of dominated labels: 207
- Subproblem took 1 milli seconds 
+ Subproblem took 0 milli seconds 
 
  Solving subproblem for vehicle 1
 number of non-dominated paths: 36number of dominated labels: 239
- Subproblem took 1 milli seconds 
+ Subproblem took 0 milli seconds 
 
  Solving subproblem for vehicle 2
 number of non-dominated paths: 33number of dominated labels: 267
- Subproblem took 1 milli seconds 
+ Subproblem took 0 milli seconds 
 
  Objective value: 852172.8824444
 
@@ -82,8 +82,8 @@ Node: 3, Location: 33 ,  Oslo, Time: 23.95, Profit: 733495.6624908, Reduced cost
 Node: 2, Location: 48 , Hammarvika, Time: 13.8, Profit: 747169.8854348001, Reduced cost: 747169.8854348001, unreachablePickupNodes: [2, 8, 12], openNodes: [2], dailyDrivingTime: 0.0, startTimeDailyRest: 2.8000000000000007, numberDailyRests: 2, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 173.239, WeightCapacityUsed: 13.0, VolumeCapacityUsed: 21.0, Predessesor: 0
 Node: 0, Location: 27 ,  Rennebu, Time: 0.0, Profit: 0.0, Reduced cost: 0.0, unreachablePickupNodes: [], openNodes: [], dailyDrivingTime: 0.0, startTimeDailyRest: 0.0, numberDailyRests: 1, StartTimeIntermediateBreak: 0.0, consecutiveDrivingTime: 0.0, workingTime: 0.0, totalDistance: 0.0, WeightCapacityUsed: 0.0, VolumeCapacityUsed: 0.0
 
-Total time to solve rootnode: 14
+Total time to solve rootnode: 7
 
 ---- ROOTNODE FINISHED ----
  
- Took 1082 milli seconds
+ Took 1505 milli seconds

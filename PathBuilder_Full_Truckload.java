@@ -1438,14 +1438,14 @@ public class PathBuilder_Full_Truckload {
 				return null;
 			}
 			// Computing the start time of the daily rest as the time that is reached first of the daily driving time, the consecutive driving time, the 24 hour rule, or the working time. If none are reached, place the daily rest at the end of the arc
-			startTimeDailyRest = Math.min(startTimeIntermediateBreak + intermediateBreakTime + timeLeftDailyDriving - drivingTimeBeforeFirstBreak, startTimeIntermediateBreak + intermediateBreakTime + maxConsecutiveDrivingTime);		
+			startTimeDailyRest = Math.min(startTimeIntermediateBreak + intermediateBreakTime + timeLeftDailyDriving, startTimeIntermediateBreak + intermediateBreakTime + maxConsecutiveDrivingTime);		
 			startTimeDailyRest = Math.min(13 + 24 * (numberDailyRests - 1), startTimeDailyRest); 
 			startTimeDailyRest = Math.min(startTimeDailyRest, arrivalTime - dailyRestTime);
 			startTimeDailyRest = Math.min(startTimeDailyRest, startTimeIntermediateBreak + intermediateBreakTime + maxWorkingTime);
 			// Computing the arrival time including the time used for intermediate break and daily rest
 			arrivalTime = Math.max(L.time + arcDrivingTime + L.node.weight*inputdata.timeTonService + intermediateBreakTime + dailyRestTime, node.earlyTimeWindow);
 			// Computing the driving time between the intermediate break and the daily rest
-			double drivingTimeBetweenBreaks = startTimeDailyRest - startTimeIntermediateBreak - intermediateBreakTime;
+			double drivingTimeBetweenBreaks = Math.min(startTimeDailyRest - startTimeIntermediateBreak - intermediateBreakTime, arcDrivingTime - drivingTimeBeforeFirstBreak);
 			// Computing the consecutive driving time, the consecutive working time and the daily driving time after the daily rest
 			consecutiveDrivingTime = arcDrivingTime - drivingTimeBeforeFirstBreak - drivingTimeBetweenBreaks;
 			consecutiveWorkingTime = arcDrivingTime - drivingTimeBeforeFirstBreak - drivingTimeBetweenBreaks;
