@@ -1,0 +1,39 @@
+lambda_0_0 1.0
+lambda_1_1 1.0
+lambda_2_2 1.0
+Objective value initial problem: -0.0
+----- New master problem ---- 
+
+ Solving subproblem for vehicle 0
+number of non-dominated paths: 25212number of dominated labels: 119832
+ Subproblem took 2659 milli seconds 
+
+ Solving subproblem for vehicle 1
+number of non-dominated paths: 15036number of dominated labels: 191923
+ Subproblem took 1072 milli seconds 
+
+ Solving subproblem for vehicle 2
+number of non-dominated paths: 26347number of dominated labels: 320563
+ Subproblem took 3044 milli seconds 
+
+ Objective value: 2109814.785552
+
+----- New master problem ---- 
+
+ Solving subproblem for vehicle 0
+number of non-dominated paths: 24759number of dominated labels: 437277
+ Subproblem took 2187 milli seconds 
+
+ Solving subproblem for vehicle 1
+number of non-dominated paths: 16239number of dominated labels: 512100
+ Subproblem took 1050 milli seconds 
+
+ Solving subproblem for vehicle 2
+number of non-dominated paths: 26425number of dominated labels: 639776
+ Subproblem took 2642 milli seconds 
+
+ Objective value: 2662085.5168301007
+
+----- New master problem ---- 
+
+--- Maximal execution time met ----

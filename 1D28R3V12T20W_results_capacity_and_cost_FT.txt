@@ -1,0 +1,11 @@
+lambda_0_0 1.0
+lambda_1_1 1.0
+lambda_2_2 1.0
+Objective value initial problem: -0.0
+----- New master problem ---- 
+
+ Solving subproblem for vehicle 0
+number of non-dominated paths: 41733number of dominated labels: 219762
+ Subproblem took 6715 milli seconds 
+
+--- Maximal execution time met ----

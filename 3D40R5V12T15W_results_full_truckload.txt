@@ -6,4 +6,4 @@ Total time to solve rootnode: 0
 
 ---- ROOTNODE FINISHED ----
  
- Took 29 milli seconds
+ Took 94 milli seconds

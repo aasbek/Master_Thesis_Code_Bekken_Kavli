@@ -8,7 +8,7 @@ import java.util.Vector;
 
 
 public class InputReader {
-	public static void inputReader(String datafile, InstanceData inputdata, Vector<Node> pickupNodes, Vector<Node> deliveryNodes, Vector<Node>startDepots, Vector<Vehicle>vehicles, PrintWriter fw ) {
+	public static void inputReader(String datafile, InstanceData inputdata, Vector<Node> pickupNodes, Vector<Node> deliveryNodes, Vector<Node>startDepots, Vector<Vehicle>vehicles, PrintWriter fw, PrintWriter cw ) {
 		try {
 			File file = new File(datafile);
 			FileReader reader = new FileReader(file);
@@ -19,12 +19,14 @@ public class InputReader {
 			String[] list1 = line.split(",");
 			inputdata.timeWindowSetting = Integer.parseInt(list1[1].trim());
 			fw.print(inputdata.timeWindowSetting + ";");
-			
+			cw.print(inputdata.timeWindowSetting + ";");
+		
 			// Reading the weight generation setting of the problem
 			line = fr.readLine();
 			list1 = line.split(",");
 			inputdata.weightSetting = Integer.parseInt(list1[1].trim());
 			fw.print(inputdata.weightSetting + ";");
+			cw.print(inputdata.weightSetting + ";");
 			
 			// Reading the number of vehicles in the problem
 			line = fr.readLine();

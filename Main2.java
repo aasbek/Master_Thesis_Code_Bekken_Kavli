@@ -12,11 +12,11 @@ public class Main2 {
 	public static void main(String[] args) throws Exception {
 		
 		int fileNumber = 3;
-		String type = "full_truckload";
+		String type = "capacity_and_cost_FT";
 		int[] RequestDataSetNumbers = {10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 46, 49};
 //		int[] RequestDataSetNumbers = {22, 25, 28, 31, 34, 37, 40, 43, 46, 49};
 		
-		for(int numVehicles = 9; numVehicles < 11; numVehicles ++) {
+		for(int numVehicles = 6; numVehicles < 11; numVehicles ++) {
 			for (int r : RequestDataSetNumbers) {
 				int t = 12;
 				int w = 15;
@@ -31,6 +31,7 @@ public class Main2 {
 								// Writing result to files
 								File file = new File (fileNumber + "D" + r + "R" + numVehicles + "V" +t+ "T" + w+ "W_results_"+type+".txt");
 								FileWriter resultWriter = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results_"+type+".txt", true);
+								FileWriter resultWriter2 = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results2_"+type+".txt", true);
 								
 								if (!file.exists()) {
 									try { file.createNewFile(); 
@@ -42,6 +43,7 @@ public class Main2 {
 								// Initializing sets 
 								PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));	
 								PrintWriter fw = new PrintWriter(resultWriter);
+								PrintWriter cw = new PrintWriter(resultWriter2);
 								Vector<Node> pickupNodes = new Vector<Node>();
 								Vector<Node> deliveryNodes = new Vector<Node>();
 								Vector<Node> startDepots = new Vector<Node>();
@@ -52,16 +54,20 @@ public class Main2 {
 								
 							
 								// Reading the input file
-								InputReader.inputReader(datafile, inputdata, pickupNodes, deliveryNodes, startDepots, vehicles, fw);
+								InputReader.inputReader(datafile, inputdata, pickupNodes, deliveryNodes, startDepots, vehicles, fw, cw);
 								
 								// Writing the name of the current data instance to file
 								fw.print(datafile + ";");
 								fw.print(pickupNodes.size() + ";");
 								fw.print(vehicles.size() + ";");
-
+								
+								cw.print(datafile + ";");
+								cw.print(pickupNodes.size() + ";");
+								cw.print(vehicles.size() + ";");
 								// Calling the solver 
-								GurobiInterface solver = new GurobiInterface(inputdata, deliveryNodes,  pickupNodes, vehicles, dualVisitedPickupsCon, dualOneVisitCon, pw, fw);
+								GurobiInterface solver = new GurobiInterface(inputdata, deliveryNodes,  pickupNodes, vehicles, dualVisitedPickupsCon, dualOneVisitCon, pw, fw, cw);
 								solver.columnGenerator();
+								cw.println();
 							
 								long endTime = System.nanoTime();
 								
@@ -74,6 +80,7 @@ public class Main2 {
 								pw.flush();
 								pw.close();
 								fw.close();
+								cw.close();
 							}
 							
 						}
@@ -88,6 +95,7 @@ public class Main2 {
 					// Writing result to files
 					File file = new File (fileNumber + "D" + r + "R" + numVehicles +"V12T15W_results_"+type+".txt");
 					FileWriter resultWriter = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results_"+type+".txt", true);
+					FileWriter resultWriter2 = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results2_"+type+".txt", true);
 				
 					if (!file.exists()) {
 						try { file.createNewFile(); 
@@ -99,6 +107,7 @@ public class Main2 {
 					// Initializing sets 
 					PrintWriter pw = new PrintWriter(file);	
 					PrintWriter fw = new PrintWriter(resultWriter);
+					PrintWriter cw = new PrintWriter(resultWriter2);
 					Vector<Node> pickupNodes = new Vector<Node>();
 					Vector<Node> deliveryNodes = new Vector<Node>();
 					Vector<Node> startDepots = new Vector<Node>();
@@ -109,17 +118,21 @@ public class Main2 {
 					
 					
 					// Reading the input file
-					InputReader.inputReader(datafile, inputdata, pickupNodes, deliveryNodes, startDepots, vehicles, fw);
+					InputReader.inputReader(datafile, inputdata, pickupNodes, deliveryNodes, startDepots, vehicles, fw, cw);
 					
 					// Writing the name of the current data instance to file
 					fw.print(datafile + ";");
 					fw.print(pickupNodes.size() + ";");
 					fw.print(vehicles.size() + ";");
+					
+					cw.print(datafile + ";");
+					cw.print(pickupNodes.size() + ";");
+					cw.print(vehicles.size() + ";");
 
 					// Calling the solver 
-					GurobiInterface solver = new GurobiInterface(inputdata, deliveryNodes,  pickupNodes, vehicles, dualVisitedPickupsCon, dualOneVisitCon, pw, fw);
+					GurobiInterface solver = new GurobiInterface(inputdata, deliveryNodes,  pickupNodes, vehicles, dualVisitedPickupsCon, dualOneVisitCon, pw, fw, cw);
 					solver.columnGenerator();
-				
+					cw.println();
 					long endTime = System.nanoTime();
 					
 					System.out.println("Took "+(endTime - startTime)/1000000 + " milli seconds"); 
@@ -131,6 +144,7 @@ public class Main2 {
 					pw.flush();
 					pw.close();
 					fw.close();
+					cw.close();
 				}
 				else if((r != 10 || r != 19 || r != 28 || r != 37 || r != 46) && numVehicles < 6) {
 					long startTime = System.nanoTime();
@@ -141,6 +155,7 @@ public class Main2 {
 					// Writing result to files
 					File file = new File (fileNumber + "D" + r + "R" + numVehicles +"V12T15W_results_"+type+".txt");
 					FileWriter resultWriter = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results_"+type+".txt", true);
+					FileWriter resultWriter2 = new FileWriter(fileNumber+"D"+numVehicles+"V_all_results2_"+type+".txt", true);
 				
 					if (!file.exists()) {
 						try { file.createNewFile(); 
@@ -152,6 +167,7 @@ public class Main2 {
 					// Initializing sets 
 					PrintWriter pw = new PrintWriter(file);	
 					PrintWriter fw = new PrintWriter(resultWriter);
+					PrintWriter cw = new PrintWriter(resultWriter2);
 					Vector<Node> pickupNodes = new Vector<Node>();
 					Vector<Node> deliveryNodes = new Vector<Node>();
 					Vector<Node> startDepots = new Vector<Node>();
@@ -162,17 +178,21 @@ public class Main2 {
 					
 					
 					// Reading the input file
-					InputReader.inputReader(datafile, inputdata, pickupNodes, deliveryNodes, startDepots, vehicles, fw);
+					InputReader.inputReader(datafile, inputdata, pickupNodes, deliveryNodes, startDepots, vehicles, fw, cw);
 					
 					// Writing the name of the current data instance to file
 					fw.print(datafile + ";");
 					fw.print(pickupNodes.size() + ";");
 					fw.print(vehicles.size() + ";");
+					
+					cw.print(datafile + ";");
+					cw.print(pickupNodes.size() + ";");
+					cw.print(vehicles.size() + ";");
 
 					// Calling the solver 
-					GurobiInterface solver = new GurobiInterface(inputdata, deliveryNodes,  pickupNodes, vehicles, dualVisitedPickupsCon, dualOneVisitCon, pw, fw);
+					GurobiInterface solver = new GurobiInterface(inputdata, deliveryNodes,  pickupNodes, vehicles, dualVisitedPickupsCon, dualOneVisitCon, pw, fw, cw);
 					solver.columnGenerator();
-				
+					cw.println();
 					long endTime = System.nanoTime();
 					
 					System.out.println("Took "+(endTime - startTime)/1000000 + " milli seconds"); 
@@ -184,8 +204,8 @@ public class Main2 {
 					pw.flush();
 					pw.close();
 					fw.close();
+					cw.close();
 				}
-			
 			}
 		}
 	}

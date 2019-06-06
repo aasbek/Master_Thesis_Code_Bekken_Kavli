@@ -24,6 +24,9 @@ public class Label {
 		public int numberDailyRests;
 		public double consecutiveWorkingTime;
 		public double totalDistance;
+		public double capacityUtilization;
+		public double totalCosts;
+
 
 	// Print information about the label
 	public String toString() {

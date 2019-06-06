@@ -56,7 +56,7 @@ public class Node {
        locationName= "Mer�ker";
        break;
    case 13:
-       locationName= " Hassdalen";
+       locationName= " Hessdalen";
        break;
    case 14:
        locationName= "Krokstad�ra";

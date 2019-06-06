@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Vector;
 
 
-public class PathBuilder {
+public class PathBuilder_old {
 	public Vector<Node> pickupNodes;
 	public Vector<Node> deliveryNodes;
 	public Vector<Node> nodesWithoutDepot;
@@ -20,13 +20,14 @@ public class PathBuilder {
 	int routeNumber = 1;
 
 
-	public PathBuilder(Vector<Node> pickupNodes, Vector<Node> deliveryNodes, InstanceData inputdata, PrintWriter pw, Vector<Vehicle> vehicles) {
+	public PathBuilder_old(Vector<Node> pickupNodes, Vector<Node> deliveryNodes, InstanceData inputdata, PrintWriter pw, Vector<Vehicle> vehicles) {
 		this.pickupNodes = pickupNodes;
 		this.deliveryNodes = deliveryNodes;
 		this.inputdata = inputdata;
 		this.pw = pw;
 		this.vehicles = vehicles;
 		numberOfDominatedLabels = 0;
+		numberOfPaths = 0;
 	}
 	
 	
@@ -1416,7 +1417,7 @@ public class PathBuilder {
 				return null;
 			}
 			// Computing the start time of the daily rest as the time that is reached first of the daily driving time, the consecutive driving time, the 24 hour rule, or the working time. If none are reached, place the daily rest at the end of the arc
-			startTimeDailyRest = Math.min(startTimeIntermediateBreak + intermediateBreakTime + timeLeftDailyDriving , startTimeIntermediateBreak + intermediateBreakTime + maxConsecutiveDrivingTime);		
+			startTimeDailyRest = Math.min(startTimeIntermediateBreak + intermediateBreakTime + timeLeftDailyDriving - drivingTimeBeforeFirstBreak, startTimeIntermediateBreak + intermediateBreakTime + maxConsecutiveDrivingTime);		
 			startTimeDailyRest = Math.min(13 + 24 * (numberDailyRests - 1), startTimeDailyRest); 
 			startTimeDailyRest = Math.min(startTimeDailyRest, arrivalTime - dailyRestTime);
 			startTimeDailyRest = Math.min(startTimeDailyRest, startTimeIntermediateBreak + intermediateBreakTime + maxWorkingTime);
@@ -2479,7 +2480,7 @@ public class PathBuilder {
 				}
 				else return false; 	
 			}
-			else return false; 
+			else return false; 	
 		}
 		else return false; 
 	}

@@ -14,11 +14,12 @@ public class Main_Heuristic {
 		long startTime = System.nanoTime();
 		
 	//	int[] HeuristicTestDataSetNumbers = {22, 25, 28, 31, 34, 37};
-		int[] MoselTestDataSetNumbers = {1,2,3,4,5,6,7,9,10};
+	//	int[] MoselTestDataSetNumbers = {1,2,3,4,5,6,7,9,10};
+		int[] RequestDataSetNumbers = {10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 46, 49};
 			
-		for (int r : MoselTestDataSetNumbers) {
-			//String datafile =  "1D" + r + "R3V12T15W.txt";
-			String datafile =  r+"_TEST_Java.txt";
+		for (int r : RequestDataSetNumbers) {
+			String datafile =  "1D" + r + "R3V12T15W.txt";
+			//String datafile =  r+"_TEST_Java.txt";
 	
 			// Writing result to files
 			//File file = new File ( "1D"+r+"R3V12T15W_results.txt");
