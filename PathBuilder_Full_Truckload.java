@@ -153,6 +153,13 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
 			
+			// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+			L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+			L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+			L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+			+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
+					
+			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
 
@@ -249,6 +256,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						
+			// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+			L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+			L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+			L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+			+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -324,6 +337,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+
+			// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+			L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+			L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+			L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+					+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -535,7 +554,14 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
-			
+	
+				
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
+						
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
 	
@@ -631,6 +657,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -704,6 +736,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+			
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -889,7 +927,13 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
-			
+	
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
+						
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
 			
@@ -986,6 +1030,12 @@ public class PathBuilder_Full_Truckload {
 						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 						+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 						+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+				
+				// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+				L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+				L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+				L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+				+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -1058,6 +1108,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -1255,6 +1311,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -1351,7 +1413,13 @@ public class PathBuilder_Full_Truckload {
 						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 						+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 						+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
-			
+	
+				// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+				L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+				L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+				L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+				+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
+				
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
 				
@@ -1423,6 +1491,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+			
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -1631,6 +1705,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+				
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -1727,6 +1807,12 @@ public class PathBuilder_Full_Truckload {
 						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 						+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 						+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+				
+				// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+				L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+				L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+				L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+				+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -1800,6 +1886,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -2019,6 +2111,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
@@ -2116,6 +2214,12 @@ public class PathBuilder_Full_Truckload {
 						+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 						+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
 				
+				// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+				L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+				L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+				L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+				+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
+				
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;
 			
@@ -2188,6 +2292,12 @@ public class PathBuilder_Full_Truckload {
 								+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node)
 								+ inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node)
 								+ (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						
+						// Calculating total fuel costs, total distance-dependent costs and total time-dependent cost
+						L2.totalTimeDependentCosts = L.totalTimeDependentCosts + (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm)* (L2.time - L.time); 
+						L2.totalDistanceDependentCosts = L.totalDistanceDependentCosts + inputdata.otherDistanceDependentCostsPerKm * inputdata.getDistance(L.node, node);
+						L2.totalFuelCosts = L.totalFuelCosts + inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*inputdata.getDistance(L.node,node)
+						+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*L.weightCapacityUsed*inputdata.getDistance(L.node,node);
 			
 			// Calculating the reduced cost of the label
 			L2.reducedCost = L2.profit - L2.totalPickupDual - L2.vehicleDual;

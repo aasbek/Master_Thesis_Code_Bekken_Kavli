@@ -12,13 +12,13 @@ public class Main_Basic {
 
 	public static void main(String[] args) throws Exception {
 		long startTime = System.nanoTime();
-		String type = "cost_allocation";
+		String type = "_cost_allocation_LTL";
 	//	int[] HeuristicTestDataSetNumbers = {22, 25, 28, 31, 34, 37};
 	//	int[] MoselTestDataSetNumbers = {1,2,3,4,5,6,7,9,10};
 			
 	//	for (int r : MoselTestDataSetNumbers) {
 			//String datafile =  "1D" + r + "R3V12T15W.txt";
-			String datafile = "3D10R3V12T15W.txt";
+			String datafile = "3D34R3V12T15W.txt";
 	
 			// Writing result to files
 			//File file = new File ( "1D"+r+"R3V12T15W_results.txt");

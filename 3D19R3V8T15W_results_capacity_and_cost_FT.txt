@@ -2,8 +2,8 @@ Objective value initial problem: -0.0
 ----- New master problem ---- 
 
  Objective value: -0.0
-Total time to solve rootnode: 1
+Total time to solve rootnode: 0
 
 ---- ROOTNODE FINISHED ----
  
- Took 28 milli seconds
+ Took 40 milli seconds

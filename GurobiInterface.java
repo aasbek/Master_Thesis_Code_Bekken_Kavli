@@ -49,7 +49,7 @@ import gurobi.*;
 		public Vector<Node> pickupNodes;
 		public Vector<Node> deliveryNodes;
 		public Vector<Vehicle> vehicles;
-		public PathBuilder2 builder;
+		public PathBuilder_Full_Truckload builder;
 		public PrintWriter pw;
 		public PrintWriter fw;
 		public PrintWriter cw;
@@ -128,7 +128,7 @@ import gurobi.*;
 			model.optimize();
 			
 			
-			builder = new PathBuilder2(pickupNodes, deliveryNodes, inputdata, pw, vehicles);
+			builder = new PathBuilder_Full_Truckload(pickupNodes, deliveryNodes, inputdata, pw, vehicles);
 			
 			// Print initial solution
 			for(int k = 0; k < vehicles.size(); k++) {
@@ -399,6 +399,7 @@ import gurobi.*;
 					if(route >= vehicles.size()) {
 						// Print the label in the end depot and all predecessor labels 
 					//	System.out.println(pathList.get(route).toString());
+						pw.append("\n" + pathList.get(route).totalCosts + ";" + pathList.get(route).totalDistanceDependentCosts + ";" + pathList.get(route).totalTimeDependentCosts + ";" + pathList.get(route).totalFuelCosts +"\n");
 						pw.append("\n" + pathList.get(route).toString() + "\n");
 						Label temp = pathList.get(route).predesessor;
 						Label temp2 = pathList.get(route).predesessor;
@@ -410,8 +411,13 @@ import gurobi.*;
 						while(temp2!=null) {
 							if(temp2.node.type == "PickupNode") {
 								double directDistance = inputdata.getDistance(temp2.node, temp2.node.getCorrespondingNode(temp2.node, v.nodes)); 
-								double directTime = inputdata.getTime(temp2.node, temp2.node.getCorrespondingNode(temp2.node, v.nodes));
-								pw.append("\n" + temp2.node.number + ";" + temp2.node.locationName + ";" + temp2.node.getCorrespondingNode(temp2.node, v.nodes).locationName + ";" + directDistance + ";" + directTime + ";" + temp2.node.weight + ";" + temp2.node.volume);
+								double directTime = inputdata.getTime(temp2.node, temp2.node.getCorrespondingNode(temp2.node, v.nodes)) + temp2.node.weight * inputdata.timeTonService * 2;
+								double directDistanceDependentCosts = inputdata.otherDistanceDependentCostsPerKm * directDistance;
+								double directTimeDependentCosts = (inputdata.laborCostperHour + inputdata.otherTimeDependentCostsPerKm) * directTime ;
+								double directFuelCosts = inputdata.fuelPrice*inputdata.fuelConsumptionEmptyTruckPerKm*directDistance
+										+ inputdata.fuelPrice*inputdata.fuelConsumptionPerTonKm*temp2.node.weight*directDistance;
+						
+								pw.append("\n" + temp2.node.number + ";" + temp2.node.locationName + ";" + temp2.node.getCorrespondingNode(temp2.node, v.nodes).locationName + ";" + directDistance + ";" + directTime + ";" + temp2.node.weight + ";" + temp2.node.volume + ";" + directDistanceDependentCosts + ";" + directTimeDependentCosts + ";" + directFuelCosts);
 							}
 							temp2 = temp2.predesessor;
 						}

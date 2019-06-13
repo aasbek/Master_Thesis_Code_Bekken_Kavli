@@ -12,11 +12,11 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 	
-		int fileNumber = 3;
+		int fileNumber = 1;
 		int numVehicles = 3;
-		String type = "capacity_and_cost_FT";
+		String type = "cost_allocation_FT";
 	//	int[] RequestDataSetNumbers = {10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 46, 49};
-		int[] RequestDataSetNumbers = {19};
+		int[] RequestDataSetNumbers = {10, 19, 28, 37};
 	
 
 		for (int r : RequestDataSetNumbers) {

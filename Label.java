@@ -26,6 +26,9 @@ public class Label {
 		public double totalDistance;
 		public double capacityUtilization;
 		public double totalCosts;
+		public double totalTimeDependentCosts;
+		public double totalDistanceDependentCosts;
+		public double totalFuelCosts;
 
 
 	// Print information about the label
